@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Sample Page for uploading v1.1</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		
+		<meta name="robots" content="noindex, nofollow">
+
+		<!-- Le styles -->
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+		<style type="text/css">
+			body {
+				padding-top: 60px;
+				padding-bottom: 30px;
+			}
+		</style>
+	</head>
+
+	<body>
+	
+    <div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<!-- Brand logo would be here -->
+				<a class="brand span4" href="sample_v1.0.html">Brand Logo</a>
+				
+				<div class="nav-collapse collapse">
+				<ul class="nav">
+					<!-- Lectures drop-down menu -->
+					<li class="dropdown span4">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Lectures<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Elementary school</a></li>
+							<li><a href="#">Middle school</a></li>
+							<li><a href="#">High school</a></li>
+							<li><a href="#">University</a></li>
+							<!-- Graduate school submenu -->
+							<li class="dropdown-submenu">
+								<a href="#">Graduate school</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Law school</a></li>
+									<li><a href="#">Medical school</a></li>
+									<li><a href="#">Business school</a></li>
+									<li><a href="#">Engineering school</a></li>
+								</ul>
+							</li>
+							<!-- Miscellaneous school submenu -->
+							<li class="dropdown-submenu">
+								<a href="#">Miscellaneous school</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Home&amp;Garden</a></li>
+									<li><a href="#">Mom</a></li>
+									<li><a href="#">Style</a></li>
+									<li><a href="#">Food</a></li>
+									<li><a href="#">Tech</a></li>
+									<li><a href="#">Money</a></li>
+									<li><a href="#">Health</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<a href="#logInModal" class="btn btn-primary btn-small" role="button" data-toggle="modal">Sign in &raquo;</a>
+					<a href="#signUpModal" class="btn btn-primary btn-small" role="button" data-toggle="modal">Join us &raquo;</a>
+				</ul>
+				
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+	</div>
+	
+    <div class="container">
+		<div class="span9">
+			<form>
+				<fieldset>
+					<legend><b>Upload video</b></legend>
+					
+					<ul id="uploadChoiceTab" class="nav nav-tabs">
+						<li class="active">
+							<a href="#localFile" data-toggle="tab">Upload video from your computer</a>
+						</li>
+						<li class>
+							<a href="#youtubeFile" data-toggle="tab">Link existing Youtube video</a>
+						</li>
+					</ul>
+										
+					<div id="myTabContent" class="tab-content">
+						<div class="tab-pane fade active in" id="localFile">
+							<label>Choose a file from your local machine</label>
+							<input type="file">							
+							<div class="progress progress-striped">
+								<div class="bar" style="width: 60%;"></div>
+							</div>
+							<div class="bar" style="width: 60%;"></div>
+						</div>
+					
+						<div class="tab-pane fade" id="youtubeFile">
+							<label>Youtube link address <a href="#">what's this?</a></label>
+							<input type="text" class="span9">
+						</div>
+					</div>
+					
+					<label>Attach document for this video</label>
+					<input type="file">
+					<p> </p>
+					
+					<label>Title</label>
+					<input class="span9" type="text" placeholder="">
+					
+					<label>Description</label>
+					<textarea class="span9" name="description" rows="5"></textarea>
+					
+					<label>School</label>
+					<select class="selectpicker">
+						<option value="1" selected="selected">Elementary school</option>
+						<option value="2">Middle school</option>
+						<option value="3">High school</option>
+						<option value="4">University</option>
+						<option value="5">Graduate school</option>
+						<option value="6">Technical/Vocational school</option>
+						<option value="7">Miscellaneous school</option>
+					</select>
+					
+					<label>Tags</label>
+					<input class="span9" type="text" placeholder="For example, Korean government culture">
+					
+					<label>Category</label>
+					<select class="selectpicker">
+						<option value="1" selected="selected">Math</option>
+						<option value="2">Science</option>
+						<option value="3">Humanities</option>
+						<option value="4">Geometry</option>
+						<option value="5">History</option>
+						<option value="6">U.S. history</option>
+						<option value="7">World history</option>
+					</select>
+					
+					<label>Recommended age level</label>
+					<select class="selectpicker">
+						<option value="1" selected="selected">2-10</option>
+						<option value="2">11-18</option>
+						<option value="3">Adult</option>
+					</select>
+					
+					<label>Level of expertise</label>
+					<select class="selectpicker">
+						<option value="1" selected="selected">Beginner</option>
+						<option value="2">Intermediate</option>
+						<option value="3">Advanced</option>
+					</select>
+					
+					<label>Language spoken in the video</label>
+					<select class="selectpicker">
+						<option value="1" selected="selected">English</option>
+						<option value="2">Spanish</option>
+						<option value="3">Korean</option>
+					</select>
+					
+					<label></label>
+					<p hidden="true">dd</p>
+					
+					<button type="submit" class="btn btn-success">Upload</button>
+					<button type="submit" class="btn btn-danger">Cancel</button>
+				</fieldset>
+			</form>
+			<hr>
+		</div>
+		
+		<!-- bottom navigation bar -->
+		<div class="navbar navbar-inverse navbar-fixed-bottom">
+			<div class="navbar-inner">
+				<div class="container">
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li><a href="#">About us</a><li>
+							<li><a href="#">Our library</a><li>
+							<li><a href="#">How to use</a><li>
+							<li><a href="#">Contact us</a><li>
+							<li><a href="#">More...1</a><li>
+							<li><a href="#">More...2</a><li>
+							<li><a href="#">More...3</a><li>
+						</ul>
+					</div>
+				</div>
+				
+				<!-- Copyright -->
+				<center><p class="text-info">&copy; Story Films Inc. 2013</p></center>		
+			</div>
+		</div>
+    </div> <!-- end of container -->
+
+	<!-- FOOTER -->
+		
+	
+	
+	<!-- Sign-up modal -->
+	<div id="signUpModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3 id="myModalLabel">Welcome to join Teach us all</h3>
+		</div>
+		
+		<form class="form-horizontal">
+			
+			<div class="control-group">
+				<label class="control-label" for="inputFirstName">First name</label>
+				<div class="controls">
+					<input class="span3" type="text" id="inputFirstName" placeholder="First name">
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label" for="inputLastName">Last name</label>
+				<div class="controls">
+					<input class="span3" type="text" id="inputLastName" placeholder="Last name">
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label" for="inputEmail">Email</label>
+				<div class="controls">
+					<input class="span3" type="text" id="inputEmail" placeholder="Email">
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label" for="inputPassword">Password</label>
+				<div class="controls">
+					<input class="span3" type="password" id="inputPassword" placeholder="Enter Password">
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label" for="reInputPassword">Confirm password</label>
+				<div class="controls">
+					<input class="span3" type="password" id="reInputPassword" placeholder="Re-Enter Password">
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<div class="controls">
+					<label class="checkbox">
+						<input type="checkbox">I agree all your <a href="#">Terms of Services</a>
+					</label>
+				</div>
+			</div>
+			
+			<div class="modal-footer">
+				<button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Close</button>
+				<button class="btn btn-success" type="submit">Sign up</button>
+			</div>
+		</form>
+	</div>
+	
+	<!-- Log-in modal -->
+	<div id="logInModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="logInModalLabel" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3 id="logInModalLabel">Welcome back Teach us all</h3>
+		</div>
+		
+		<form class="form-horizontal">
+			<div class="control-group">
+				<label class="control-label" for="inputUserId">ID</label>
+				<div class="controls">
+					<input class="span3" type="text" id="inputUserId" placeholder="Your email address">
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label" for="inputUserPassword">Password</label>
+				<div class="controls">
+					<input class="span3" type="text" id="inputUserPassword" placeholder="Your password">
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<div class="controls">
+					<label class="checkbox">
+						<input type="checkbox">Keep me signed in
+						<a href="#" class="btn btn-link">Fotgot my password</a>
+					</label>
+				<div>
+			</div>
+			
+			<div class="modal-footer">
+				<button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Close</button>
+				<button class="btn btn-success" type="submit">Log in</button>
+			</div>
+		</form>
+	</div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	
+	<script>
+		$('#uploadChoiceTab a').click(function (e) {
+			e.preventDefault();
+			$(this).tab('show');
+		})
+	</script>
+	<!-- Hosting24 Analytics Code -->
+	<script type="text/javascript" src="http://stats.hosting24.com/count.php"></script>
+	<!-- End Of Analytics Code -->
+	
+	</body>
+</html>
